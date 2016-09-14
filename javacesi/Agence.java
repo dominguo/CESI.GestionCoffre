@@ -2,9 +2,6 @@ package javacesi;
 
 import java.util.ArrayList;
 
-/**
- * Created by Aurelien on 14/09/2016.
- */
 public class Agence
 {
     private String nom;
@@ -31,6 +28,47 @@ public class Agence
 
     public Secteur GetSecteur()
     {
-        
+        return secteur;
     }
+
+    public String GetAdresse()
+    {
+        return adresse;
+    }
+
+    public void SetAdresse(String adresse)
+    {
+        this.adresse = adresse;
+    }
+
+    public Banque GetBanque()
+    {
+        return banque;
+    }
+
+    public void SetBanque(Banque banque)
+    {
+        this.banque = banque;
+    }
+
+    public void AddCoffre(Coffre c)
+    {
+        listeCoffre.add(c);
+    }
+
+    public ArrayList<Coffre> GetListeCoffre()
+    {
+        return listeCoffre;
+    }
+
+    public ArrayList<Client> GetListeClient()
+    {
+        return listeClient;
+    }
+
+    public void AddClient(Client c)
+    {
+        listeClient.add(c);
+    }
+
 }
