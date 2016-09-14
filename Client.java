@@ -16,7 +16,7 @@ public class Client {
 
   public String Adresse3;
 
-  public String CodePostale;
+  public String CodePostal;
 
   public String Commune;
 
