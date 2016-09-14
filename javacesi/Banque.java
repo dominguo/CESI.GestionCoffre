@@ -1,11 +1,7 @@
 package javacesi;
 
-import java.security.acl.Group;
 import java.util.ArrayList;
 
-/**
- * Created by Aurelien on 14/09/2016.
- */
 public class Banque
 {
     private GroupementBanque groupementBanque;
