@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 package javacesi;
 
 /**
@@ -11,12 +13,15 @@ public class Client {
 	private String prenom;
 	private Agence agenceRattachement;
 	
+	private Coffre coffre;
+	
 	// Constructeurs
-	public Client(int id, String nm, String pn, Agence agr) {
+	public Client(int id, String nm, String pn, Agence agr, Coffre cfr) {
 		this.id = id;
 		this.nom = nm;
 		this.prenom = pn;
 		this.agenceRattachement = agr;
+		this.coffre = cfr;
 	}
 	
 	public Client() {
@@ -70,4 +75,5 @@ public class Client {
     {
 		return this.prenom + " " + this.nom;
     }
+    
 }
