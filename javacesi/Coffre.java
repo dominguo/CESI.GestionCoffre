@@ -1,5 +1,8 @@
 package javacesi;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Coffre
 {
     private int id;
@@ -8,11 +11,12 @@ public class Coffre
     private String typeSecurite;
     private int idClient;
     private double montant;
+    private List<Operation> operations;
 
 
     //constructeurs
 
-    public Coffre(int id, String loc, String typec, String types, int client, double montant)
+    public Coffre(int id, String loc, String typec, String types, int client, double montant, List<Operation> lesOperations)
     {
         this.id = id;
         this.localisation = loc;
@@ -20,6 +24,7 @@ public class Coffre
         this.typeSecurite = types;
         this.idClient = client;
         this.montant = montant;
+        this.operations = lesOperations;
     }
 
     public Coffre()
@@ -58,6 +63,11 @@ public class Coffre
         return this.montant;
     }
 
+    public List<Operation> getOperations()
+    {
+        return this.operations;
+    }
+
     //setter
 
     public void setId(int identifiant)
@@ -88,6 +98,11 @@ public class Coffre
     public void setMontant(double montant)
     {
         this.montant = montant;
+    }
+
+    public void setOperation(Operation ope)
+    {
+        this.operations.add(ope);
     }
 
 }
