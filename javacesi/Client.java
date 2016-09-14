@@ -65,7 +65,7 @@ public class Client {
         this.agenceRattachement = agr;
     }	
     
-    // Méthode de renvoi du client sous sa forme usuelle : PRENOM - NOM
+    // MÃ©thode de renvoi du client sous sa forme usuelle : PRENOM - NOM
     public String toString() 
     {
 		return this.prenom + " " + this.nom;
