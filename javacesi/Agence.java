@@ -18,4 +18,19 @@ public class Agence
     {
 
     }
+
+    public void SetNom(String nom)
+    {
+        this.nom = nom;
+    }
+
+    public String GetNom()
+    {
+        return nom;
+    }
+
+    public Secteur GetSecteur()
+    {
+        
+    }
 }

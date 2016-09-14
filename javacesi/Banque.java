@@ -33,5 +33,24 @@ public class Banque
         return designation;
     }
 
+    public GroupementBanque GetGroupementBanque()
+    {
+        return groupementBanque;
+    }
+
+    public void SetGroupementBanque(GroupementBanque groupe)
+    {
+        groupementBanque = groupe;
+    }
+
+    public ArrayList<Agence> GetListeAgence()
+    {
+        return listeAgence;
+    }
+
+    public void AddAgence(Agence agence)
+    {
+        listeAgence.add(agence);
+    }
 
 }
