@@ -1,7 +1,6 @@
 package javacesi;
 
 import java.util.ArrayList;
-import javacesi.Client;
 
 public class Agence
 {
@@ -10,18 +9,18 @@ public class Agence
     private String adresse;
     private Banque banque;
     private ArrayList<Coffre> listeCoffre;
-    private ArrayList<Client> listeClient;
+    private ArrayList<ClientBanque> listeClient;
 
     public Agence()
     {
         listeCoffre = new ArrayList<Coffre>();
-        listeClient = new ArrayList<Client>();
+        listeClient = new ArrayList<ClientBanque>();
     }
 
     public Agence(String nom, Secteur secteur, String adresse, Banque banque)
     {
         listeCoffre = new ArrayList<Coffre>();
-        listeClient = new ArrayList<Client>();
+        listeClient = new ArrayList<ClientBanque>();
         this.nom = nom;
         this.secteur = secteur;
         this.adresse = adresse;
@@ -73,12 +72,12 @@ public class Agence
         return listeCoffre;
     }
 
-    public ArrayList<Client> GetListeClient()
+    public ArrayList<ClientBanque> GetListeClient()
     {
         return listeClient;
     }
 
-    public void AddClient(Client c)
+    public void AddClient(ClientBanque c)
     {
         listeClient.add(c);
     }
