@@ -4,20 +4,18 @@ import java.util.ArrayList;
 
 public class Banque
 {
-    private GroupementBanque groupementBanque;
     private String designation;
-    private ArrayList<Agence> listeAgence;
+    private ArrayList<Secteur> listeSecteur;
 
     public Banque()
     {
-        listeAgence = new ArrayList<Agence>();
+        listeSecteur = new ArrayList<Secteur>();
     }
 
-    public Banque(String designation, GroupementBanque groupementBanque)
+    public Banque(String designation)
     {
         this.designation = designation;
-        this.groupementBanque = groupementBanque;
-        listeAgence = new ArrayList<Agence>();
+        listeSecteur = new ArrayList<Secteur>();
     }
 
     public void SetDesignation(String designation)
@@ -30,32 +28,14 @@ public class Banque
         return designation;
     }
 
-    public GroupementBanque GetGroupementBanque()
+    public void AddSecteur(Secteur secteur)
     {
-        return groupementBanque;
+        listeSecteur.add(secteur);
     }
 
-    public void SetGroupementBanque(GroupementBanque groupe)
+    public ArrayList<Secteur> GetListeSecteur()
     {
-        groupementBanque = groupe;
-    }
-
-    public ArrayList<Agence> GetListeAgence()
-    {
-        return listeAgence;
-    }
-
-    public void AddAgence(Agence agence)
-    {
-        listeAgence.add(agence);
-    }
-
-    public Agence GetAgence(int i)
-    {
-        if(i >= listeAgence.size() || i < 0)
-            return null;
-        else
-            return listeAgence.get(i);
+        return listeSecteur;
     }
 
 }

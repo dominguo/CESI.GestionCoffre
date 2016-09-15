@@ -4,74 +4,108 @@ import java.util.ArrayList;
 
 public class Agence
 {
+    /**
+     * Nom de l'agence
+     */
     private String nom;
-    private Secteur secteur;
+
+    /**
+     * Adresse de l'agence
+     * exemple: 3, rue charles
+     */
     private String adresse;
-    private Banque banque;
+
+    /**
+     * Liste des coffres de l'agence
+     */
     private ArrayList<Coffre> listeCoffre;
+
+    /**
+     * Liste des clients de l'agence
+     */
     private ArrayList<ClientBanque> listeClient;
 
+
+    /**
+     * Constructeur vide de la classe Agence. Instancie les listes ListeCoffre et ListeClient.
+     */
     public Agence()
     {
         listeCoffre = new ArrayList<Coffre>();
         listeClient = new ArrayList<ClientBanque>();
     }
 
-    public Agence(String nom, Secteur secteur, String adresse, Banque banque)
+    /**
+     * Constructeur de la classe Agence.
+     * @param nom : nom de l'agence
+     * @param adresse : adresse de l'agence
+     */
+    public Agence(String nom, String adresse)
     {
         listeCoffre = new ArrayList<Coffre>();
         listeClient = new ArrayList<ClientBanque>();
         this.nom = nom;
-        this.secteur = secteur;
         this.adresse = adresse;
-        this.banque = banque;
     }
 
+    /**
+     * Méthode SetNom permettant de modifier le nom de l'agence
+     * @param nom
+     */
     public void SetNom(String nom)
     {
         this.nom = nom;
     }
 
+    /**
+     * Méthode GetNom permettant de récupérer le nom de l'agence.
+     * @return nom
+     */
     public String GetNom()
     {
         return nom;
     }
 
-    public Secteur GetSecteur()
-    {
-        return secteur;
-    }
-
+    /**
+     * Méthode GetAdresse permettant de récupérer l'adresse de l'agence.
+     * @return adresse
+     */
     public String GetAdresse()
     {
         return adresse;
     }
 
+    /**
+     * Méthode SetAdresse permettant de modifier l'adresse de l'agence.
+     * @param adresse
+     */
     public void SetAdresse(String adresse)
     {
         this.adresse = adresse;
     }
 
-    public Banque GetBanque()
+    /**
+     * Méthode AddCoffre permettant d'ajouter un coffre à la liste de coffres de l'agence.
+     * @param coffre
+     */
+    public void AddCoffre(Coffre coffre)
     {
-        return banque;
+        listeCoffre.add(coffre);
     }
 
-    public void SetBanque(Banque banque)
-    {
-        this.banque = banque;
-    }
-
-    public void AddCoffre(Coffre c)
-    {
-        listeCoffre.add(c);
-    }
-
+    /**
+     * Méthode GetListeCoffre permettant de récupérer la liste de coffres de l'agence.
+     * @return listeCoffre
+     */
     public ArrayList<Coffre> GetListeCoffre()
     {
         return listeCoffre;
     }
 
+    /**
+     * Méthode
+     * @return
+     */
     public ArrayList<ClientBanque> GetListeClient()
     {
         return listeClient;
