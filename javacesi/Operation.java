@@ -47,10 +47,10 @@ public class Operation {
     public void setCfre(Coffre cfre) {
         this.cfre = cfre;
     }
-    public Client getClt() {
+    public ClientBanque getClt() {
         return clt;
     }
-    public void setClt(Client clt) {
+    public void setClt(ClientBanque clt) {
         this.clt = clt;
     }
 

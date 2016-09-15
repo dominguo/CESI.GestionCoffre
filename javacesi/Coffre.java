@@ -9,14 +9,14 @@ public class Coffre
     private String localisation;
     private String typeCoffre;
     private String typeSecurite;
-    private Client client;
+    private ClientBanque client;
     private double montant;
     private List<Operation> operations;
 
 
     //constructeurs
 
-    public Coffre(int id, String loc, String typec, String types, Client cl, double montant, List<Operation> lesOperations)
+    public Coffre(int id, String loc, String typec, String types, ClientBanque cl, double montant, List<Operation> lesOperations)
     {
         this.id = id;
         this.localisation = loc;
@@ -53,7 +53,7 @@ public class Coffre
         return this.typeSecurite;
     }
 
-    public Client getClient()
+    public ClientBanque getClient()
     {
         return this.client;
     }
@@ -90,7 +90,7 @@ public class Coffre
         this.typeSecurite = tSecurite;
     }
 
-    public void setClient(Client iClient)
+    public void setClient(ClientBanque iClient)
     {
         this.client = iClient;
     }
