@@ -11,6 +11,7 @@ public class Operation {
 
     private ClientBanque clt;
     private Coffre cfre;
+    private Frais frs;
 
     // Constructors //
 
@@ -52,6 +53,12 @@ public class Operation {
     }
     public void setClt(ClientBanque clt) {
         this.clt = clt;
+    }
+    public Frais getFrs() {
+        return frs;
+    }
+    public void setFrs(Frais frs) {
+        this.frs = frs;
     }
 
 }
