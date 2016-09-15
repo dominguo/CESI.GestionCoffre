@@ -105,4 +105,14 @@ public class Coffre
         this.operations.add(ope);
     }
 
+    //Methodes
+
+    public void afficheOperations()
+    {
+        System.out.println("Liste des opérations du coffre n°" + this.id);
+        for(Operation operation : this.getOperations())
+        {
+            System.out.println("\n "+ operation.getTypeOp() +" effectué par "+ operation.getClt().getPrenom()+" "+operation.getClt().getNom()+", début : " + operation.getDebut() + ", fin " + operation.getFin());
+        }
+    }
 }
