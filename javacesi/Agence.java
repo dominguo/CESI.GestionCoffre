@@ -131,26 +131,45 @@ public class Agence
         listeClient.add(client);
     }
 
+    /**
+     * Méthode GetBanque permettant de récupérer la banque de rattachement de l'agence
+     * @return banque
+     */
     public Banque GetBanque()
     {
         return banque;
     }
 
+    /**
+     * Méthode SetBanque permettant d'attacher une agence à une banque
+     * @param banque
+     */
     public void SetBanque(Banque banque)
     {
         this.banque = banque;
     }
 
+    /**
+     * Méthode permettant de récupérer le secteur de l'agence
+     * @return secteur
+     */
     public Secteur GetSecteur()
     {
         return secteur;
     }
 
+    /**
+     * Méthode permattant d'attacher une agence à un secteur
+     * @param secteur
+     */
     public void SetSecteur(Secteur secteur)
     {
         this.secteur = secteur;
     }
 
+    /**
+     * Méthode permettant d'afficher les informations de l'agence
+     */
     public void AfficherBanque()
     {
         System.out.println("####Agence " + GetNom() + " ####");
@@ -167,6 +186,9 @@ public class Agence
         System.out.println("Il y a : " + listeClient.size() + " clients dans l'agence");
     }
 
+    /**
+     * Méthode permettant d'afficher la liste des client d'une agence
+     */
     public void AfficherListeClients()
     {
         System.out.println("####Agence " + GetNom() + " ####");
