@@ -1,3 +1,4 @@
+package javacesi;
 import java.util.Date;
 
 
@@ -13,8 +14,8 @@ public class Operation {
 
     // Constructors //
 
-    Operation(){}
-    Operation(Date d, Date f, String t){
+    public Operation(){}
+    public Operation(Date d, Date f, String t){
         this.debut = d;
         this.fin = f;
         this.typeOp = t;
