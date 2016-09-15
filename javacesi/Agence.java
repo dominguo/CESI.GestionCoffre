@@ -103,17 +103,21 @@ public class Agence
     }
 
     /**
-     * Méthode
-     * @return
+     * Méthode GetListeClient permettant de récupérer la liste de clients de l'agence.
+     * @return listeClient
      */
     public ArrayList<ClientBanque> GetListeClient()
     {
         return listeClient;
     }
 
-    public void AddClient(ClientBanque c)
+    /**
+     * Méthode AddClient permettant d'ajouter un client à la liste de clients de l'agence.
+     * @param client
+     */
+    public void AddClient(ClientBanque client)
     {
-        listeClient.add(c);
+        listeClient.add(client);
     }
 
 }
