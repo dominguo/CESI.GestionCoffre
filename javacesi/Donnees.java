@@ -143,7 +143,6 @@ public class Donnees {
 		bql.add(b1);
 		bql.add(b2);
 		bql.add(b3);
-		
 	}
 
 }

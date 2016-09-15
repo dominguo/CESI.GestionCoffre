@@ -70,7 +70,7 @@ public class Frais {
 		System.out.println("Liste des frais: ");
 		for(Frais frais : listFrais)
 		{
-			System.out.println("\n " + frais.GetIdFrais() + " " + frais.getDateAnnee()+ " " +frais.GetMontant()+ " " + frais.GetDescription());
+			System.out.println("\n " + frais.GetIdFrais() + " nous sommes en " + frais.getDateAnnee()+ " cela va te coûter " +frais.GetMontant()+ " tiens ! ... ta descriptions " + frais.GetDescription());
 		}
 	}
 
