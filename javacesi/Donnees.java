@@ -115,6 +115,20 @@ public class Donnees {
 		Frais fra2 = new Frais(2,d2e,(float) 100.0,"Taxe");
 		Frais fra3 = new Frais(3,d3e,(float) 50.0,"Contrôle de routine");
 		
+		// Liste des frais
+		ArrayList<Frais> fralist = new ArrayList<Frais>();
+		fralist.add(fra1);
+		fralist.add(fra2);
+		fralist.add(fra3);
+		
+		// Ajout de clients aux agences
+		a1.AddClient(cl1);
+		a1.AddCoffre(cf1);
+		a5.AddClient(cl2);
+		a5.AddCoffre(cf2);
+		a6.AddClient(cl3);
+		a6.AddCoffre(cf4);
+		
 		// Création des opérations
 		Operation op1 = new Operation();
 		op1.setFrs(fra1);
