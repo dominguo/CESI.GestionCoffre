@@ -1,64 +1,74 @@
 package javacesi;
-import java.util.Date;
 
+import java.util.Date;
 
 public class Operation {
 
-    // Variables //
-    private Date debut;
-    private Date fin;
-    private String typeOp;
+	/* Variables */
+	private Date dateDebut;
+	private Date dateFin;
+	private String typeOperation;
 
-    private ClientBanque clt;
-    private Coffre cfre;
-    private Frais frs;
+	private ClientBanque clientBanque;
+	private Coffre coffre;
+	private Frais frais;
 
-    // Constructors //
+	/* Constructors */
+	public Operation() {
+	}
 
-    public Operation(){}
-    public Operation(Date d, Date f, String t){
-        this.debut = d;
-        this.fin = f;
-        this.typeOp = t;
-    }
+	public Operation(Date aDateDebut, Date aDateFin, String aTypeOperation) {
+		this.dateDebut = aDateDebut;
+		this.dateFin = aDateFin;
+		this.typeOperation = aTypeOperation;
+	}
 
-    // Getter / Setter //
+	public Date getDateDebut() {
+		return dateDebut;
+	}
 
-    public Date getDebut() {
-        return debut;
-    }
-    public void setDebut(Date debut) {
-        this.debut = debut;
-    }
-    public Date getFin() {
-        return fin;
-    }
-    public void setFin(Date fin) {
-        this.fin = fin;
-    }
-    public String getTypeOp() {
-        return typeOp;
-    }
-    public void setTypeOp(String typeOp) {
-        this.typeOp = typeOp;
-    }
-    public Coffre getCfre() {
-        return cfre;
-    }
-    public void setCfre(Coffre cfre) {
-        this.cfre = cfre;
-    }
-    public ClientBanque getClt() {
-        return clt;
-    }
-    public void setClt(ClientBanque clt) {
-        this.clt = clt;
-    }
-    public Frais getFrs() {
-        return frs;
-    }
-    public void setFrs(Frais frs) {
-        this.frs = frs;
-    }
+	public void setDebut(Date aDateDebut) {
+		this.dateDebut = aDateDebut;
+	}
+
+	public Date getDateFin() {
+		return dateFin;
+	}
+
+	public void setFin(Date aDateFin) {
+		this.dateFin = aDateFin;
+	}
+
+	public String getTypeOperation() {
+		return typeOperation;
+	}
+
+	public void setTypeOperation(String aTypeOperation) {
+		this.typeOperation = aTypeOperation;
+	}
+
+	public Coffre getCoffre() {
+		return coffre;
+	}
+
+	public void setCfre(Coffre aCoffre) {
+		this.coffre = aCoffre;
+	}
+
+	public ClientBanque getClientBanque() {
+		return clientBanque;
+	}
+
+	public void setClt(ClientBanque aClientBanque) {
+		this.clientBanque = aClientBanque;
+	}
+
+	public Frais getFrais() {
+		return frais;
+	}
+
+	public void setFrais(Frais aFrais) {
+		this.frais = aFrais;
+	}
 
 }
