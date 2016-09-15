@@ -9,12 +9,13 @@ public class GroupementBanque
 
     public GroupementBanque()
     {
-
+        listeBanque = new ArrayList<Banque>();
     }
 
     public GroupementBanque(String designation)
     {
         this.designation = designation;
+        listeBanque = new ArrayList<Banque>();
     }
 
     public void SetDesignation(String designation)
@@ -34,7 +35,10 @@ public class GroupementBanque
 
     public Banque GetBanque(int i)
     {
-        return listeBanque.get(i);
+        if(i >= listeBanque.size() || i < 0)
+            return null;
+        else
+            return listeBanque.get(i);
     }
 
     public ArrayList<Banque> GetListeBanque()

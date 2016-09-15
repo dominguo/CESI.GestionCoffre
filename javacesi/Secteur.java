@@ -11,7 +11,15 @@ public class Secteur
 
     public Secteur()
     {
+        listeAgence = new ArrayList<Agence>();
+    }
 
+    public Secteur(String ville, int codePostal, String pays)
+    {
+        this.ville = ville;
+        this.codePostal = codePostal;
+        this.pays = pays;
+        listeAgence = new ArrayList<Agence>();
     }
 
     public void SetVille(String ville)
@@ -56,7 +64,10 @@ public class Secteur
 
     public Agence GetAgence(int i)
     {
-        return listeAgence.get(i);
+        if(i >= listeAgence.size() || i < 0)
+            return null;
+        else
+            return listeAgence.get(i);
     }
 
 }
