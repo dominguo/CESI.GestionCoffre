@@ -131,4 +131,13 @@ public class Secteur
         else
             return listeAgence.get(i);
     }
+
+    public void AfficherListeAgence()
+    {
+        System.out.println("Liste agence secteur : " + GetPays() + " " + GetVille());
+        for(int i = 0; i < listeAgence.size(); i++)
+        {
+            System.out.println("Agence : " + listeAgence.get(i).GetNom());
+        }
+    }
 }

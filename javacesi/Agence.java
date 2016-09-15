@@ -192,9 +192,22 @@ public class Agence
     public void AfficherListeClients()
     {
         System.out.println("####Agence " + GetNom() + " ####");
+        System.out.println("####Liste des clients");
         for(int i = 0; i < listeClient.size(); i++)
         {
             System.out.println(i+"-"+listeClient.get(i).getPrenom()+ " " + listeClient.get(i).getNom());
+        }
+    }
+
+    public void AfficherListeCoffre()
+    {
+        System.out.println("####Agence " + GetNom() + " ####");
+        System.out.println("####Liste des coffres");
+        for(int i = 0; i < listeCoffre.size(); i++)
+        {
+            System.out.println(i+"-"+listeCoffre.get(i).getId());
+            System.out.println("Propriétaire : " + listeCoffre.get(i).getClient().getNom() + " " + listeCoffre.get(i).getClient().getPrenom());
+            System.out.println("Montant : " + listeCoffre.get(i).getMontant());
         }
     }
 }

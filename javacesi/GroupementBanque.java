@@ -98,4 +98,13 @@ public class GroupementBanque
     {
         return listeBanque;
     }
+
+    public void AfficherListeBanque()
+    {
+        System.out.println("Groupement : " + GetDesignation());
+        for(int i = 0; i < listeBanque.size(); i++)
+        {
+            System.out.println("Banque : " + listeBanque.get(i).GetDesignation());
+        }
+    }
 }
