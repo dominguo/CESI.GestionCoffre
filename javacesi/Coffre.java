@@ -6,7 +6,7 @@ import java.util.List;
 public class Coffre
 {
     private int id;
-    private String localisation;
+    private Agence localisation;
     private String typeCoffre;
     private String typeSecurite;
     private Client client;
@@ -16,7 +16,7 @@ public class Coffre
 
     //constructeurs
 
-    public Coffre(int id, String loc, String typec, String types, Client cl, double montant, List<Operation> lesOperations)
+    public Coffre(int id, Agence loc, String typec, String types, Client cl, double montant, List<Operation> lesOperations)
     {
         this.id = id;
         this.localisation = loc;
@@ -38,7 +38,7 @@ public class Coffre
         return this.id;
     }
 
-    public String getLocalisation()
+    public Agence getLocalisation()
     {
         return this.localisation;
     }
@@ -75,7 +75,7 @@ public class Coffre
         this.id = identifiant;
     }
 
-    public void setLocalisation(String loc)
+    public void setLocalisation(Agence loc)
     {
         this.localisation = loc;
     }
