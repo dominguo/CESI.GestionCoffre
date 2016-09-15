@@ -122,11 +122,11 @@ public class Donnees {
 
         // Création des opérations
         Operation op1 = new Operation();
-        op1.setFrs(fra1);
+        op1.setFrais(fra1);
         Operation op2 = new Operation();
-        op2.setFrs(fra2);
+        op2.setFrais(fra2);
         Operation op3 = new Operation();
-        op3.setFrs(fra3);
+        op3.setFrais(fra3);
         Operation op4 = new Operation();
 
         // Création d'une liste de banque

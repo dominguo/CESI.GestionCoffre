@@ -58,21 +58,7 @@ public class Frais {
 		return Description;
 	}
 
-	/*
-	*
-	*
-	* Affiche tous les frais
-	*
-	* */
-
-	public void afficheFrais(listFrais)
-	{
-		System.out.println("Liste des frais: ");
-		for(Frais frais : listFrais)
-		{
-			System.out.println("\n " + frais.GetIdFrais() + " " + frais.getDateAnnee()+ " " +frais.GetMontant()+ " " + frais.GetDescription());
-		}
-	}
+	
 
 	public String toString()
 	{
