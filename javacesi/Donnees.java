@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package javacesi;
 
 import java.text.ParseException;
