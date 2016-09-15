@@ -1,118 +1,100 @@
 package javacesi;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class Coffre
-{
-    private int id;
-    private String localisation;
-    private String typeCoffre;
-    private String typeSecurite;
-    private ClientBanque client;
-    private double montant;
-    private List<Operation> operations;
+public class Coffre {
+	private int id;
+	private String localisation;
+	private String typeCoffre;
+	private String typeSecurite;
+	private ClientBanque client;
+	private double montant;
+	private List<Operation> operations;
 
+	// constructeurs
 
-    //constructeurs
+	public Coffre(int id, String loc, String typec, String types, ClientBanque cl, double montant,
+			List<Operation> lesOperations) {
+		this.id = id;
+		this.localisation = loc;
+		this.typeCoffre = typec;
+		this.typeSecurite = types;
+		this.client = cl;
+		this.montant = montant;
+		this.operations = lesOperations;
+	}
 
-    public Coffre(int id, String loc, String typec, String types, ClientBanque cl, double montant, List<Operation> lesOperations)
-    {
-        this.id = id;
-        this.localisation = loc;
-        this.typeCoffre = typec;
-        this.typeSecurite = types;
-        this.client = cl;
-        this.montant = montant;
-        this.operations = lesOperations;
-    }
+	public Coffre() {
 
-    public Coffre()
-    {
+	}
 
-    }
+	// getter
+	public int getId() {
+		return this.id;
+	}
 
-    //getter
-    public int getId()
-    {
-        return this.id;
-    }
+	public String getLocalisation() {
+		return this.localisation;
+	}
 
-    public String getLocalisation()
-    {
-        return this.localisation;
-    }
+	public String getTypeCoffre() {
+		return this.typeCoffre;
+	}
 
-    public String getTypeCoffre()
-    {
-        return this.typeCoffre;
-    }
+	public String getTypeSecurite() {
+		return this.typeSecurite;
+	}
 
-    public String getTypeSecurite()
-    {
-        return this.typeSecurite;
-    }
+	public ClientBanque getClient() {
+		return this.client;
+	}
 
-    public ClientBanque getClient()
-    {
-        return this.client;
-    }
+	public double getMontant() {
+		return this.montant;
+	}
 
-    public double getMontant()
-    {
-        return this.montant;
-    }
+	public List<Operation> getOperations() {
+		return this.operations;
+	}
 
-    public List<Operation> getOperations()
-    {
-        return this.operations;
-    }
+	// setter
 
-    //setter
+	public void setId(int identifiant) {
+		this.id = identifiant;
+	}
 
-    public void setId(int identifiant)
-    {
-        this.id = identifiant;
-    }
+	public void setLocalisation(String loc) {
+		this.localisation = loc;
+	}
 
-    public void setLocalisation(String loc)
-    {
-        this.localisation = loc;
-    }
+	public void setTypeCoffre(String tCoffre) {
+		this.typeCoffre = tCoffre;
+	}
 
-    public void setTypeCoffre(String tCoffre)
-    {
-        this.typeCoffre = tCoffre;
-    }
+	public void setTypeSecurite(String tSecurite) {
+		this.typeSecurite = tSecurite;
+	}
 
-    public void setTypeSecurite(String tSecurite)
-    {
-        this.typeSecurite = tSecurite;
-    }
+	public void setClient(ClientBanque iClient) {
+		this.client = iClient;
+	}
 
-    public void setClient(ClientBanque iClient)
-    {
-        this.client = iClient;
-    }
+	public void setMontant(double montant) {
+		this.montant = montant;
+	}
 
-    public void setMontant(double montant)
-    {
-        this.montant = montant;
-    }
+	public void setOperation(Operation ope) {
+		this.operations.add(ope);
+	}
 
-    public void setOperation(Operation ope)
-    {
-        this.operations.add(ope);
-    }
+	// Methodes
 
-    //Methodes
-
-    public void afficheOperations()
-    {
-        System.out.println("Liste des opÃ©rations du coffre nÂ°" + this.id);
-        for(Operation operation : this.getOperations())
-        {
-            System.out.println("\n "+ operation.getTypeOp() +" effectuÃ© par "+ operation.getClt().getPrenom()+" "+operation.getClt().getNom()+", dÃ©but : " + operation.getDebut() + ", fin " + operation.getFin());
-        }
-    }
+	public void afficheOperations() {
+		System.out.println("Liste des opérations du coffre n°" + this.id);
+		for (Operation operation : this.getOperations()) {
+			System.out.println("\n " + operation.getTypeOperation() + " effectué par "
+					+ operation.getClientBanque().getPrenom() + " " + operation.getClientBanque().getNom()
+					+ ", début : " + operation.getDateDebut() + ", fin " + operation.getDateFin());
+		}
+	}
 }
