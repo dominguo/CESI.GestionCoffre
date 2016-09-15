@@ -4,6 +4,17 @@ import java.util.ArrayList;
 
 public class Agence
 {
+
+    /**
+     * Attribut banque : banque de rattachement
+     */
+    private Banque banque;
+
+    /**
+     * Attrubut secteur : secteur de rattachement
+     */
+    private Secteur secteur;
+
     /**
      * Nom de l'agence
      */
@@ -120,4 +131,48 @@ public class Agence
         listeClient.add(client);
     }
 
+    public Banque GetBanque()
+    {
+        return banque;
+    }
+
+    public void SetBanque(Banque banque)
+    {
+        this.banque = banque;
+    }
+
+    public Secteur GetSecteur()
+    {
+        return secteur;
+    }
+
+    public void SetSecteur(Secteur secteur)
+    {
+        this.secteur = secteur;
+    }
+
+    public void AfficherBanque()
+    {
+        System.out.println("####Agence " + GetNom() + " ####");
+        if(banque != null)
+            System.out.println("Banque de rattachement de l'agence " + nom + " : " + GetBanque().GetDesignation());
+        else
+            System.out.println("L'agence n'est pas rattaché à une banque");
+
+        if(secteur != null)
+            System.out.println("Secteur de l'agence : " +  secteur.GetPays() + " " + secteur.GetVille());
+        else
+            System.out.println("L'agence n'est rattachée à aucun secteur");
+
+        System.out.println("Il y a : " + listeClient.size() + " clients dans l'agence");
+    }
+
+    public void AfficherListeClients()
+    {
+        System.out.println("####Agence " + GetNom() + " ####");
+        for(int i = 0; i < listeClient.size(); i++)
+        {
+            System.out.println(i+"-"+listeClient.get(i).getPrenom()+ " " + listeClient.get(i).getNom());
+        }
+    }
 }

@@ -116,6 +116,7 @@ public class Secteur
     public void AddAgence(Agence agence)
     {
         listeAgence.add(agence);
+        agence.SetSecteur(this);
     }
 
     /**
