@@ -9,7 +9,7 @@ public class Operation {
     private Date fin;
     private String typeOp;
 
-    private Client clt;
+    private ClientBanque clt;
     private Coffre cfre;
 
     // Constructors //
