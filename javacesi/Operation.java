@@ -9,8 +9,9 @@ public class Operation {
     private Date fin;
     private String typeOp;
 
-    private ClientBanque clt;
+    private Client clt;
     private Coffre cfre;
+    private Frais frs;
 
     // Constructors //
 
@@ -47,11 +48,17 @@ public class Operation {
     public void setCfre(Coffre cfre) {
         this.cfre = cfre;
     }
-    public ClientBanque getClt() {
+    public Client getClt() {
         return clt;
     }
-    public void setClt(ClientBanque clt) {
+    public void setClt(Client clt) {
         this.clt = clt;
+    }
+    public Frais getFrs() {
+        return frs;
+    }
+    public void setFrs(Frais frs) {
+        this.frs = frs;
     }
 
 }
